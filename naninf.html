@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Naninf Calculator</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="naninf.css">
+    <meta name="description" content="Simplified Balatro score calculator for Naninf-style runs with Baron, Mime, Blueprint, and Brainstorm.">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1.0" />
+  </head>
+  <body>
+    <div id="naninfMain">
+      <div class="naninfHeader">
+        <h1>Naninf Calculator</h1>
+        <a href="index.html" class="naninfBack">&larr; Full Calculator</a>
+      </div>
+
+      <div class="naninfSection toggleRow">
+        <div class="handLevel toggle-item">
+          <span id="togglePlasmaBtn" class="lvlBtn">X</span>
+          <span class="handName">Plasma Deck</span>
+        </div>
+        <div class="handLevel toggle-item">
+          <span id="toggleOptimizeBtn" class="lvlBtn">X</span>
+          <span class="handName">Optimize Joker Order</span>
+        </div>
+      </div>
+
+      <div class="naninfSection">
+        <h2>Jokers</h2>
+        <div class="jokerGrid" id="jokerGrid">
+          <!-- filled by JS -->
+        </div>
+      </div>
+
+      <div class="naninfSection">
+        <h2>Hand</h2>
+        <div class="numberRow">
+          <span class="numberLabel">High Card level</span>
+          <div class="numberControl" data-input="highCardLevel">
+            <span class="lvlBtn" data-step="-10">--</span>
+            <span class="lvlBtn" data-step="-1">-</span>
+            <span class="handLvl" contenteditable="true" data-field="highCardLevel">200</span>
+            <span class="lvlBtn" data-step="1">+</span>
+            <span class="lvlBtn" data-step="10">++</span>
+          </div>
+        </div>
+        <div class="numberRow">
+          <span class="numberLabel">Hand size</span>
+          <div class="numberControl" data-input="handSize">
+            <span class="lvlBtn" data-step="-1">-</span>
+            <span class="handLvl" contenteditable="true" data-field="handSize">10</span>
+            <span class="lvlBtn" data-step="1">+</span>
+          </div>
+        </div>
+        <div class="hint">Hand size is just informational. You can keep any number of cards "in hand" below.</div>
+      </div>
+
+      <div class="naninfSection">
+        <h2>Cards in hand</h2>
+        <div class="cardGrid" id="cardGrid">
+          <!-- filled by JS -->
+        </div>
+        <div class="hint" id="handFillHint"></div>
+      </div>
+
+      <div class="naninfSection result" id="resultSection">
+        <h2>Score</h2>
+        <div id="scoreOutput">
+          <div class="bestPlayName" id="bestPlayName">High Card<span class="nameLvl"> lvl.1</span></div>
+          <div class="bestPlayScore" id="bestPlayScore"><span class="chipIcon"></span>5</div>
+          <div class="levelStat" id="chipMultBreakdown">
+            <span id="scoreChips" class="levelStatB">5</span>X<span id="scoreMult" class="levelStatR">1</span>
+          </div>
+        </div>
+        <div class="bestOrder" id="bestOrder"></div>
+      </div>
+    </div>
+
+    <div id="footer">
+      <a href='https://www.playbalatro.com/'><img src='assets/Balatro logo-new.png' style='height: 3em;'></a><br>
+      <a href='https://www.github.com/EFHIII/balatro-calculator'>view code on GitHub</a>
+    </div>
+
+    <script type="text/javascript" src="balatro-sim.js"></script>
+    <script type="text/javascript" src="naninf.js"></script>
+  </body>
+</html>

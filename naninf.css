@@ -1,0 +1,239 @@
+#naninfMain {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 1em;
+  box-sizing: border-box;
+}
+
+.naninfHeader {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  margin-bottom: 1em;
+  border-bottom: 1px solid #5f7377;
+  padding-bottom: 0.5em;
+}
+
+.naninfHeader h1 {
+  margin: 0;
+  font-size: 28px;
+}
+
+.naninfBack {
+  font-size: 16px;
+}
+
+.naninfSection {
+  background-color: #0003;
+  border-radius: 0.6em;
+  padding: 0.75em 1em 1em 1em;
+  margin-bottom: 1em;
+}
+
+.naninfSection h2 {
+  font-size: 20px;
+  margin: 0 0 0.5em 0;
+  color: #fda200;
+}
+
+.toggleRow {
+  display: flex;
+  gap: 0.5em;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+}
+
+.toggleRow .handLevel {
+  min-width: 0;
+  margin: 0;
+}
+
+.toggle-item {
+  cursor: pointer;
+  user-select: none;
+}
+
+.toggle-item .lvlBtn {
+  pointer-events: none;
+}
+
+.numberRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5em;
+  margin: 0.25em 0;
+  flex-wrap: wrap;
+}
+
+.numberLabel {
+  font-size: 18px;
+  flex: 1 1 auto;
+}
+
+.numberControl {
+  display: inline-flex;
+  align-items: center;
+  background-color: #a3acb9;
+  padding: 0.2em 0.4em;
+  border-radius: 0.6em;
+  box-shadow: 0em 0.2em 0em #686e78;
+  white-space: nowrap;
+}
+
+.numberControl .lvlBtn {
+  float: none;
+  margin: 0.125em;
+}
+
+.numberControl .handLvl {
+  float: none;
+  min-width: 3em;
+  margin: 0 0.25em;
+  font-size: 18px;
+}
+
+.jokerGrid, .cardGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.25em;
+}
+
+.jokerRow {
+  display: flex;
+  align-items: center;
+  background-color: #0002;
+  padding: 0.4em 0.6em;
+  border-radius: 0.5em;
+  flex-wrap: wrap;
+  gap: 0.5em;
+}
+
+.jokerRow .jokerName {
+  flex: 1 1 auto;
+  font-size: 18px;
+  min-width: 6em;
+}
+
+.jokerRow .polyToggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25em;
+  font-size: 15px;
+  user-select: none;
+  cursor: pointer;
+}
+
+.jokerRow .polyToggle .lvlBtn {
+  float: none;
+  margin: 0;
+  pointer-events: none;
+}
+
+.polyActive .lvlBtn {
+  background: linear-gradient(135deg, #ff9bff, #9bf0ff, #ffd29b);
+  color: #222;
+}
+
+.cardRow {
+  display: flex;
+  align-items: center;
+  background-color: #0002;
+  padding: 0.4em 0.6em;
+  border-radius: 0.5em;
+  flex-wrap: wrap;
+  gap: 0.4em;
+}
+
+.cardRow .cardName {
+  flex: 1 1 auto;
+  font-size: 17px;
+  min-width: 12em;
+}
+
+.cardSwatch {
+  display: inline-block;
+  width: 0.9em;
+  height: 0.9em;
+  border-radius: 0.2em;
+  margin-right: 0.4em;
+  vertical-align: middle;
+  border: 1px solid #00000044;
+}
+
+.swatch-steel { background: #c7d3df; }
+.swatch-gold { background: #eac058; }
+.swatch-redseal { background: #fe5f55; }
+.swatch-blueseal { background: #009dff; }
+.swatch-plain { background: #f0f0f0; }
+
+.hint {
+  font-size: 14px;
+  color: #cdd;
+  margin-top: 0.5em;
+  font-style: italic;
+}
+
+.result {
+  text-align: center;
+}
+
+.bestPlayName {
+  font-size: 28px;
+  margin-bottom: 0.25em;
+}
+
+.nameLvl {
+  font-size: 0.8em;
+  padding: 0 0.4em;
+  border-radius: 0.6em;
+  background-color: #efefef;
+  color: #3a5055;
+  margin-left: 0.2em;
+}
+
+.bestPlayScore {
+  font-size: 32px;
+  margin-bottom: 0.25em;
+  word-break: break-all;
+}
+
+.chipIcon {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  vertical-align: middle;
+  margin-right: 0.25em;
+  background: radial-gradient(circle, #009dff 50%, #006bbf 70%);
+  border-radius: 50%;
+  border: 2px solid #00000055;
+}
+
+#chipMultBreakdown {
+  position: static;
+  display: inline-flex;
+  margin: 0 auto 0.5em auto;
+  left: auto;
+}
+
+.bestOrder {
+  font-size: 16px;
+  margin-top: 0.5em;
+  color: #cdd;
+}
+
+.bestOrder .jokerChip {
+  display: inline-block;
+  background-color: #5f7377;
+  padding: 0.15em 0.5em;
+  margin: 0.15em;
+  border-radius: 0.4em;
+  color: #fff;
+}
+
+.bestOrder .jokerChip.poly {
+  background: linear-gradient(135deg, #ff9bff, #9bf0ff, #ffd29b);
+  color: #222;
+}
